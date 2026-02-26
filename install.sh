@@ -28,7 +28,7 @@ apt install -y caddy
 
 echo ""
 echo -e "${CYAN}=== Шаг 2: Настройка домена ===${NC}"
-read -p "Введите ваш домен (например, tooc.uk): " DOMAIN
+read -p "Введите ваш домен (например, ya.ru): " DOMAIN
 
 echo ""
 echo -e "${CYAN}Что будет обслуживать этот домен?${NC}"
@@ -57,7 +57,7 @@ EOF
 
 elif [ "$SETUP_CHOICE" == "2" ]; then
     echo ""
-    read -p "Введите адрес целевого сервера (например, http://127.0.0.1:8080 или https://ffr.su): " PROXY_DEST
+    read -p "Введите адрес целевого сервера (например, http://127.0.0.1:8080 или https://google.com): " PROXY_DEST
     
     # Записываем конфиг для прокси
     # Caddy автоматически передает IP (X-Forwarded-For) и схему (X-Forwarded-Proto)
